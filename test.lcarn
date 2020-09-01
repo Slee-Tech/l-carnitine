@@ -1,0 +1,45 @@
+PrintToCLI <( ```Goodbye, cruel world.``` >) %%
+PrintToCLI <( ```Notice the backticks for strings.``` >) %%
+PrintToCLI <( ```The double percent is like a comma.``` >) %%
+The following variable: x Is assigned the following value of: 8 %% 
+PrintToCLI <( x >) %%
+The following variable: y Is assigned the following value of:1 + 2 * 3 - 4 / 5 * <(6 + 2>) %%
+PrintToCLI <( y >) %%
+
+If is is the case that: <( x Is greater than or equal to: y >)
+    <@
+        PrintToCLI <( ```Yes.``` >) %%
+    >@ %%
+
+If is is the case that: <( x Is less than or equal to: y >)
+    <@
+        PrintToCLI <( ```Yes.``` >) %%
+    >@ 
+    If the preceeding statement was not true, then perhaps:
+    <@
+        PrintToCLI <( ```No.``` >) %%
+    >@ %%
+
+Perform the procedure: someFunction<(>) 
+    <@ 
+        Return the value of: 3 %% 
+    >@
+
+The following variable: ftest Is assigned the following value of: someFunction<(>) %%
+PrintToCLI <( ftest >) %%
+
+Perform the procedure: testFunctionArgs<( test >) 
+    <@ 
+        Return the value of: test + 2 %%
+    >@
+
+The following variable: atest Is assigned the following value of:testFunctionArgs<( ftest >) %%
+PrintToCLI <( atest >) %%
+
+Perform the procedure: multiFunctionArgs<( numone :: numtwo :: numthree >) 
+    <@ 
+        Return the value of: numone + numtwo + numthree %%
+    >@
+
+The following variable: mtest Is assigned the following value of: multiFunctionArgs<( ftest :: atest :: 5 >) %%
+PrintToCLI <( mtest >) %%
